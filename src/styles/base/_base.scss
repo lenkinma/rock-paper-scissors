@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+body {
+	font-size: 32px;
+	font-weight: 300;
+	min-height: 100vh;
+	color: $accent;
+	overflow: hidden;
+	min-width: 100vw;
+	font-family: 'Montserrat', sans-serif;
+	background: rgb(192,71,251);
+	//background: linear-gradient(105deg, rgba(192,71,251,1) 0%, rgba(13,222,209,1) 75%, rgba(0,255,145,1) 100%);
+	//background: linear-gradient(90deg, rgba(50,33,59,1) 0%, rgba(39,140,134,1) 75%, rgba(57,199,138,1) 100%);
+	//background: linear-gradient(105deg, rgba(241,220,252,1) 0%, rgba(210,254,224,1) 40%, rgba(204,249,246,1) 73%, rgba(233,255,246,1) 100%);
+	//background: linear-gradient(90deg, rgba(164,113,113,1) 0%, rgba(138,156,120,1) 31%, rgba(113,161,151,1) 66%, rgba(156,110,156,1) 100%);
+	background: linear-gradient(80deg, rgba(7,101,149,1) 0%, rgba(43,28,28,1) 38%, rgba(27,48,46,1) 63%, rgba(142,50,50,1) 100%);
+}
+
+a {
+	color: $white;
+	transition: all 0.2s ease;
+	&:hover {
+		color: $accent;
+	}
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 15px;
+	max-width: 800px;
+	height: 100vh;
+	//position: relative;
+
+	&--sm {
+		max-width: 840px;
+	}
+	@include mediaTablet {
+		padding: 0 5px;
+	}
+}
+
+.visually-hidden {
+	height: 1px;
+	overflow: hidden;
+	width: 1px;
+	position: absolute;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	white-space: nowrap;
+}
+
+.none {
+	display: none !important;
+}
+
+.no-scroll {
+	overflow-y: hidden;
+}

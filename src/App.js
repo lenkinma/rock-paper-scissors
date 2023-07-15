@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header/Header";
+import {useState} from "react";
+import Game from "./components/Game/Game";
+import Footer from "./components/Footer/Footer";
 
 function App() {
+  const [score, setScore] = useState(0);
+  const [gameCounter, setGameCounter] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App container">
+      <Header score={score} setScore={setScore} setGameCounter={setGameCounter} />
+      <Game score={score} setScore={setScore} gameCounter={gameCounter} setGameCounter={setGameCounter}/>
+      <Footer gameCounter={gameCounter}/>
     </div>
   );
 }
