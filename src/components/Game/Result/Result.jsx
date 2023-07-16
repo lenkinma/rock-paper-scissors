@@ -5,13 +5,17 @@ function Result({setResult, gameResult}) {
 	return (
 		<div className='result'>
 			<div className="result__block">
-				<div className="result__block-item">
-					<img src={data[gameResult.you].img} alt="" className="result__block-img"/>
+				<div className='result__block-item'>
+					<button className={'result__block-btn' + (gameResult.result === 'WIN' ? ' result__win': '')}>
+						<img src={data[gameResult.you].img} alt="" className="result__block-img"/>
+					</button>
 					<h3 className="result__block-text">YOU</h3>
 				</div>
 				<h2 className="result__title">{gameResult.result}</h2>
 				<div className="result__block-item">
-					<img src={data[gameResult.AI].img} alt="" className="result__block-img"/>
+					<button className={'result__block-btn' + (gameResult.result === 'LOSE' ? ' result__win': '')}>
+						<img src={data[gameResult.AI].img} alt="" className="result__block-img"/>
+					</button>
 					<h3 className="result__block-text">AI</h3>
 				</div>
 			</div>
