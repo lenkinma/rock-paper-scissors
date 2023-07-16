@@ -12,10 +12,10 @@ function Choice({gameHandler}) {
 			<button title={data['1'].name} className='choice__btn' onClick={() => btn_handler(1)}>
 				<img className='choice__btn-img' src={data["1"].img} alt=""/>
 			</button>
-			<button title={data['3'].name} className='choice__btn' onClick={() => btn_handler(2)}>
+			<button title={data['3'].name} className='choice__btn' onClick={() => btn_handler(3)}>
 				<img className='choice__btn-img' src={data["3"].img} alt=""/>
 			</button>
-			<button title={data['2'].name} className='choice__btn' onClick={() => btn_handler(3)}>
+			<button title={data['2'].name} className='choice__btn' onClick={() => btn_handler(2)}>
 				<img className='choice__btn-img' src={data["2"].img} alt=""/>
 			</button>
 		</div>
