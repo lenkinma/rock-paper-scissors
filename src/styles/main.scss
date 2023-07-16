@@ -98,7 +98,7 @@
 		top: 1px;
 	}
 }
-.choice__btn:hover::before, .result__win::before{
+.result__win::before{
   position: absolute;
   content: "";
   top: 0px;
